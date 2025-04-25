@@ -5,4 +5,8 @@ function Board () {
     const[isXNext, setIsXNext] = useState(true)
 
     const winner = calculateWinner(squares)
+
+    const handleClick = (i) => {
+        if(squares[i] || winner) return
+    }
 }
