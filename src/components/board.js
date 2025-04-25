@@ -31,6 +31,10 @@ function Board () {
             <div className="board-row">
                 {renderSquare(6)}{renderSquare(7)}{renderSquare(8)}
             </div>
+            <button onClick={() => {
+                setSquares(Array(9).fill(null));
+                setIsXNext(true);
+            }}>Reset Game</button>
         </div>
     )
 }   
