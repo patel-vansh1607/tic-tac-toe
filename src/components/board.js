@@ -16,6 +16,6 @@ function Board () {
     setIsXNext(!isXNext)
 
     function renderSqaure(i){
-        
+        return <Square value={squares[i]} onclick={() => handleclick(i)} />
     }
 }   
