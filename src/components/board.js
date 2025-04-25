@@ -22,6 +22,9 @@ function Board () {
     return(
         <div>
             <h2>{winner ? `Winner: ${winner}` : `Next Player: ${isXNext ? 'X' : 'O'}`}</h2>
+            <div className="board-row">
+                {renderSquare(0)}{renderSquare(1)}{renderSquare(2)}
+            </div>
         </div>
     )
 }   
