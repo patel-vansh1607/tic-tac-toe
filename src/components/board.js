@@ -1,10 +1,1 @@
-const Board = () => {
-    return(
-        <div>
-            <div>
-
-            </div>
-        </div>
-    )
-}
-export default Board
+function Board () {}
