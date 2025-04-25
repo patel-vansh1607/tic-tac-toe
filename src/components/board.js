@@ -12,4 +12,6 @@ function Board () {
 
     const newSquares = squares.slice()
     newSquares[i] = isXNext ? 'X' : 'O'
+    setSquares(newSquares)
+    setIsXNext(!isXNext)
 }   
