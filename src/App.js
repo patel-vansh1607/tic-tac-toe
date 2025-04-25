@@ -3,8 +3,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="App" style={{textAlign: 'center', marginTop: '50px'}}>
+      <h1>Tic Tac Toe</h1>
+      <Ba
     </div>
   );
 }
