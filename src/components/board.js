@@ -14,4 +14,8 @@ function Board () {
     newSquares[i] = isXNext ? 'X' : 'O'
     setSquares(newSquares)
     setIsXNext(!isXNext)
+
+    function renderSqaure(i){
+        
+    }
 }   
