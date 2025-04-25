@@ -9,4 +9,7 @@ function Board () {
     const handleClick = (i) => {
         if(squares[i] || winner) return
     }
-}
+
+    const newSquares = squares.slice()
+    newSquares[i] = isXNext ? 'X' : 'O'
+}   
