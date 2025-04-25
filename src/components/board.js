@@ -18,4 +18,10 @@ function Board () {
     function renderSqaure(i){
         return <Square value={squares[i]} onclick={() => handleclick(i)} />
     }
+
+    return(
+        <div>
+            <h2>{winner ? `Winner: ${winner}` : `Next Player: ${isXNext ? 'X' : 'O'}`}</h2>
+        </div>
+    )
 }   
