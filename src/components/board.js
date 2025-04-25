@@ -38,3 +38,8 @@ function Board () {
         </div>
     )
 }   
+
+
+function calculateWinner(squares) {
+    
+}
