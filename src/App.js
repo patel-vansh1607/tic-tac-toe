@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import Board from './components/board';
 
 function App() {
   return (
     <div className="App" style={{textAlign: 'center', marginTop: '50px'}}>
       <h1>Tic Tac Toe</h1>
-      <Ba
+      <Board />
     </div>
   );
 }

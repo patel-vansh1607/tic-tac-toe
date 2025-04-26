@@ -1,7 +1,6 @@
 // src/components/Board.js
 import React, { useState } from 'react';
-import Square from './Square';
-import './Board.css';
+import Square from './board';
 
 function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
