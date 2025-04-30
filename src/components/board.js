@@ -1,59 +1,14 @@
-// src/components/Board.js
-import React, { useState } from 'react';
-import Square from './board';
+import React from 'react';
+import Square from '../components/square';
 
-function Board() {
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [isXNext, setIsXNext] = useState(true);
-
-  const winner = calculateWinner(squares);
-
-  const handleClick = (i) => {
-    if (squares[i] || winner) return;
-
-    const newSquares = squares.slice();
-    newSquares[i] = isXNext ? 'X' : 'O';
-    setSquares(newSquares);
-    setIsXNext(!isXNext);
-  };
-
-  function renderSquare(i) {
-    return <Square value={squares[i]} onClick={() => handleClick(i)} />;
-  }
-
+const Board = ({ squares, onClick }) => {
   return (
-    <div>
-      <h2>{winner ? `Winner: ${winner}` : `Next Player: ${isXNext ? 'X' : 'O'}`}</h2>
-      <div className="board-row">
-        {renderSquare(0)}{renderSquare(1)}{renderSquare(2)}
-      </div>
-      <div className="board-row">
-        {renderSquare(3)}{renderSquare(4)}{renderSquare(5)}
-      </div>
-      <div className="board-row">
-        {renderSquare(6)}{renderSquare(7)}{renderSquare(8)}
-      </div>
-      <button onClick={() => {
-        setSquares(Array(9).fill(null));
-        setIsXNext(true);
-      }}>Reset Game</button>
+    <div className="board">
+      {squares.map((val, i) => (
+        <Square key={i} value={val} onClick={() => onClick(i)} />
+      ))}
     </div>
   );
-}
-
-function calculateWinner(squares) {
-  const lines = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8],
-    [0, 3, 6], [1, 4, 7], [2, 5, 8],
-    [0, 4, 8], [2, 4, 6],
-  ];
-
-  for (let line of lines) {
-    const [a, b, c] = line;
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c])
-      return squares[a];
-  }
-  return null;
-}
+};
 
 export default Board;
