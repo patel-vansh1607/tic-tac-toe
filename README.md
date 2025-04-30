@@ -1,4 +1,4 @@
-[![Project Banner](./src//images/readme-project-banner-01.png)](https://typing-speed-tester-hazel-phi.vercel.app/)
+[![Project Banner](./src//images/readme-project-banner-01.png)](https://tic-tac-toe-u5oq.vercel.app/)
 ---
 # 🚀 **Tic Tac Toe**  
 > _A website where user can have a 2-player Tic Tac Toe_
